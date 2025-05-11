@@ -44,8 +44,8 @@ class FlyingRobot(BaseRobot):
 
 class DeliveryDrone(FlyingRobot):
     def __init__(self, name: str, weight: int, coords: list = None,
-                 max_load_weight: int = 0, current_load: int = 0) -> None:
-        super().__init__(name, weight)
+                 max_load_weight: int = 0, current_load: int = None) -> None:
+        super().__init__(name, weight, coords)
         if coords is None:
             coords = [0, 0, 0]
         self.max_load_weight = max_load_weight
